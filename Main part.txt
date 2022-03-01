@@ -1,0 +1,65 @@
+ <!-- Background and name -->
+    <!-- <div class="center-block">
+        <div class="blck">
+            <h1>Hi, my <span class="name">name</span> is <span class="name">Aleksa Subasic</span>!</h1>
+        </div>
+    </div> -->
+    <div id="header-block" class="blck">
+        <div class="center-block">
+            <h1>Hi, my <span class="name">name</span> is <span class="name">Aleksa Subasic</span>!</h1>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <main class="center-block">
+        <!-- Skills -->
+        <div id="skills-block">
+            <div class="heading-name">
+                <h2>Skills</h2>
+            </div>
+            <div id="skills">
+                <div class="blck-pic">
+                    <h2>PHP</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, quae!</p>
+                </div>
+                <div class="blck-pic">
+                    <h2>JS</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, quae!</p>
+                </div>
+                <div class="blck-pic">
+                    <h2>HTML</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, quae!</p>
+                </div>
+                <div class="blck-pic">
+                    <h2>CSS</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, quae!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="blck3">
+            <h2>Projects</h2>
+        </div>
+
+        <!-- Contact -->
+        <div class="blck4">
+            <h2>Contact</h2>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="center-block">
+            <div class="left">
+                <h3>Copyright &copy; Aleksa Subasic 98&sol;20 2021&#46;</h3>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com/home" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
