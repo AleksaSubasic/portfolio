@@ -58,11 +58,6 @@ p {
   color: #0c5792;
 }
 
-.animation-bg {
-  -webkit-animation: color-change-2x 5s linear infinite alternate both;
-          animation: color-change-2x 5s linear infinite alternate both;
-}
-
 .underline::after {
   display: block;
   content: "";
@@ -72,14 +67,14 @@ p {
   background-color: #1778b9;
 }
 
-.link-button, main .main-block .center-block #skills-block .skill-type a, main .main-block .center-block #projects-block .skill-type a, main .main-block .center-block #projects-block .project-type a, footer .center-block .right ul li a {
+.link-button, main .main-block .center-block #skills-block .skill-type a, main .main-block .center-block #projects-block .skill-type a, main .main-block .center-block #projects-block .project-type a, footer .center-block a {
   color: #b7cae6;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   font-weight: bold;
 }
 
-.link-button:hover, main .main-block .center-block #skills-block .skill-type a:hover, main .main-block .center-block #projects-block .skill-type a:hover, main .main-block .center-block #projects-block .project-type a:hover, footer .center-block .right ul li a:hover {
+.link-button:hover, main .main-block .center-block #skills-block .skill-type a:hover, main .main-block .center-block #projects-block .skill-type a:hover, main .main-block .center-block #projects-block .project-type a:hover, footer .center-block a:hover {
   color: #7ba6d1;
 }
 
@@ -105,6 +100,10 @@ p {
 .blured-picture {
   -webkit-filter: brightness(70%);
           filter: brightness(70%);
+}
+
+.margin-scroll {
+  scroll-margin-top: 160px;
 }
 
 @-webkit-keyframes color-change-2x {
@@ -395,7 +394,7 @@ header .center-block nav input:checked ~ .menu {
 }
 
 .name-profession-block .center-block i {
-  font-size: 126px;
+  font-size: 6.5rem;
   color: #0c5792;
 }
 
@@ -420,13 +419,9 @@ header .center-block nav input:checked ~ .menu {
           animation: focus-in-expand-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-main {
-  min-height: 2000px;
-}
-
 main .main-block {
-  padding: 2rem 0;
-  height: 600px;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
 }
 
 main .main-block .center-block {
@@ -448,7 +443,7 @@ main .main-block .center-block #image-text-block {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 70px;
+  padding-top: 3rem;
 }
 
 main .main-block .center-block #image-text-block .image-block {
@@ -515,20 +510,30 @@ main .main-block .center-block #image-text-block .about-block .row-one .name, ma
   text-align: center;
 }
 
-main .main-block .center-block #image-text-block .about-block .row-one p {
-  color: #ffffff;
+main .main-block .center-block #image-text-block .about-block .row-one .place a {
+  font-family: Prompt Regular;
+  color: #438fc8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main .main-block .center-block #image-text-block .about-block .row-one .place a:hover {
+  color: #7ba6d1;
 }
 
 main .main-block .center-block #image-text-block .about-block .row-two {
   margin-top: 10px;
   border-radius: 10px;
-  background-color: #7ba6d1;
-  padding: 0.5rem;
+  background-color: #438fc8;
+  padding: 0.7rem;
+}
+
+main .main-block .center-block #image-text-block .about-block .row-two p {
+  color: #b7cae6;
 }
 
 main .main-block .center-block #image-text-block .about-block p {
-  font-size: 1.15rem;
-  color: #b7cae6;
+  font-size: 1.1rem;
 }
 
 main .main-block .center-block #skills-block, main .main-block .center-block #projects-block {
@@ -540,7 +545,7 @@ main .main-block .center-block #skills-block, main .main-block .center-block #pr
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 
 main .main-block .center-block #skills-block .skill-type, main .main-block .center-block #projects-block .skill-type, main .main-block .center-block #skills-block #projects-block .project-type, main .main-block .center-block #projects-block #skills-block .project-type, main .main-block .center-block #projects-block .project-type {
@@ -565,10 +570,6 @@ main .main-block .center-block #skills-block .skill-type:hover, main .main-block
           transform: scale(1.1);
 }
 
-main .main-block .center-block #skills-block .skill-type p, main .main-block .center-block #projects-block .skill-type p, main .main-block .center-block #projects-block .project-type p {
-  font-size: 0.9rem;
-}
-
 main .main-block .center-block #skills-block .skill-type a, main .main-block .center-block #projects-block .skill-type a, main .main-block .center-block #projects-block .project-type a {
   margin-top: 10px;
   border-radius: 5px;
@@ -584,6 +585,7 @@ main .main-block .center-block #skills-block .skill-type a:hover, main .main-blo
 
 main .main-block .center-block #projects-block .project-type {
   width: 22%;
+  height: 100%;
   padding: 2rem;
 }
 
@@ -616,13 +618,13 @@ main .main-block .center-block #form-block {
 }
 
 main .main-block .center-block #form-block #my-form {
-  width: 50%;
+  width: 60%;
 }
 
 main .main-block .center-block #form-block #my-form label {
   font-family: Prompt Regular;
   color: #b7cae6;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 main .main-block .center-block #form-block #my-form input[type=text], main .main-block .center-block #form-block #my-form input[type=email], main .main-block .center-block #form-block #my-form #inputTextArea {
@@ -634,7 +636,7 @@ main .main-block .center-block #form-block #my-form input[type=text], main .main
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #b7cae6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   resize: vertical;
 }
 
@@ -642,7 +644,7 @@ main .main-block .center-block #form-block #my-form input[type=text]:focus, main
   border-radius: 5px;
   outline: none;
   background-color: #1778b9;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 
 main .main-block .center-block #form-block #my-form input[type=submit], main .main-block .center-block #form-block #my-form input[type=reset] {
@@ -688,7 +690,14 @@ footer .center-block {
 
 footer .center-block .left h3 {
   color: #b7cae6;
-  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+footer .center-block .middle a {
+  padding: 2px 5px;
+  border: 2px solid #b7cae6;
+  border-radius: 5px;
+  background-color: #1778b9;
 }
 
 footer .center-block .right ul {

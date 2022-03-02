@@ -1,20 +1,118 @@
-@media screen and (max-width: 769px) {
-    header .center-block #logo{
-        width: 50px;
-        height: 50px;
-    }
-    header .center-block nav ul li a{
-        font-size: 14px;
-    }
-    header .center-block nav ul li a{ padding: 25px 0px; }
-    h1{
-        font-size: 28px;
-    }
-    h2{
-        font-size: 22px;
+@media screen and (max-width: 1656px){
+    main .main-block .center-block #image-text-block .image-block::after {
+        top: -270px;
+        right: -230px;
     }
 }
-@media screen and (max-width: 581px) {
+@media screen and (max-width: 1220px){
+    p{ 
+        font-size: 0.9rem;
+    }
+    main .main-block .center-block #image-text-block .image-block {
+        width: 100%;
+    }
+    main .main-block .center-block #image-text-block .image-block img {
+        margin: 0px auto;
+    }
+    main .main-block .center-block #image-text-block .image-block::before {
+        top: -20px;
+        left: 360px;
+    }
+    main .main-block .center-block #image-text-block .image-block::after {
+        top: 20px;
+        right: 360px;
+    }
+    main .main-block .center-block #image-text-block .about-block {
+        margin: 4rem auto 0;
+        margin-top: 4rem;
+        width: 65%;
+    }
+    main .main-block .center-block #form-block #my-form {
+        width: 65%;
+    }
+    footer{
+        padding: 1rem 0;
+    }
+    .left, .middle, .right{
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .middle a{
+        margin-left: 1rem;
+    }
+    .middle a:first-child{ 
+        margin-left: 0rem;
+    }
+    
+}
+@media screen and (max-width: 1100px){
+    p{ 
+        font-size: 1rem; 
+    }
+    main .main-block .center-block #skills-block .skill-type {
+        width: 47%;
+        height: 250px;
+        margin-top: 2rem;
+    }
+    main .main-block .center-block #projects-block .project-type img {
+        width: 80%;
+    }
+    main .main-block .center-block #projects-block .project-type {
+        width: 47%;
+        height: 400px;
+        margin-top: 2rem;
+        padding: 2rem;
+    }
+    main .main-block .center-block #projects-block .project-type:last-child{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 1025px){
+    a{ 
+        font-size: 1rem; 
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.55rem;
+    }
+    h3{
+        font-size: 1.15rem;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    header .center-block #logo {
+        width: 60px;
+        height: 60px;
+    }
+    main .main-block .center-block #image-text-block .about-block .row-one .age h3 {
+        font-size: 1.2rem;
+    }
+    main .main-block .center-block #image-text-block .about-block p {
+        font-size: 1rem;
+    }
+    main .main-block .center-block #form-block #my-form label {
+        font-size: 1.2rem;
+    }
+    
+}
+@media screen and (max-width: 788px){
+    main .main-block .center-block #image-text-block .image-block::before, main .main-block .center-block #image-text-block .image-block::after {
+        display: none;
+    }
+    main .main-block .center-block #image-text-block .about-block {
+        width: 80%;
+    }
+    main .main-block .center-block #projects-block .project-type {
+        height: 330px;
+    }
+}
+@media screen and (max-width: 707px) {
     .center-block{
         width: 100%;
     }
@@ -49,22 +147,81 @@
     header nav ul li a:hover{
         box-shadow: none;
     }
-    h1{
-        font-size: 22px;
+    main .main-block .center-block #skills-block .skill-type, main .main-block .center-block #projects-block .project-type {
+        width: 60%;
+        margin: 2rem auto 0;
     }
-    h2{
-        font-size: 20px;
+    main .main-block .center-block #projects-block .project-type {
+        height: 420px;
     }
 }
-@media screen and (max-width: 426px) {
-    .center-block{
-        width: 100%;
+@media screen and (max-width: 592px) {
+    .name-profession-block .center-block i {
+        font-size: 4.5rem;
     }
-    /* header .center-block{
-        flex-wrap: nowrap;
+    .name-profession-block .center-block h1 {
+        font-size: 1.5rem;
+    }
+    .name-profession-block .center-block h2 {
+        font-size: 1.25rem;
+    }
+}
+@media screen and (max-width: 492px) {
+    main .main-block .center-block #image-text-block .image-block img {
+        height: 250px;
+    }
+    main .main-block .center-block #image-text-block .about-block .row-one {
         flex-direction: column;
     }
-    header nav ul li a{
-        font-size: 16px;
-    } */
+    .age, .place{
+        margin-top: 1rem;
+    }
+    .place{
+        margin-bottom: 1rem;
+    }
+    main .main-block .center-block #projects-block .project-type {
+        height: 380px;
+    }
+}
+@media screen and (max-width: 452px) {
+    .name-profession-block .center-block h1 {
+        font-size: 1.3rem;
+    }
+    .name-profession-block .center-block h2 {
+        font-size: 1.15rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .name-profession-block .center-block i {
+        font-size: 4rem;
+    }
+    .name-profession-block .center-block h1 {
+        font-size: 1.1rem;
+    }
+    .name-profession-block .center-block h2 {
+        font-size: 1rem;
+    }
+    main .main-block .center-block #image-text-block .about-block p {
+        font-size: 0.9rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    footer .center-block .left h3 {
+        font-size: 1.15rem;
+    }
+}
+@media screen and (max-width: 322px) {
+    footer .center-block .left h3 {
+        font-size: 0.95rem;
+    }
+    main .main-block .center-block #image-text-block .about-block p, p{
+        font-size: 0.7rem;
+    }
+    .name-profession-block .center-block i {
+        font-size: 3rem;
+    }
+    .name-profession-block .center-block h1, .name-profession-block .center-block h2 {
+        font-size: 0.9rem;
+    }
 }

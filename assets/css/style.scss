@@ -4,6 +4,7 @@
     font-family: Prompt Light;
     src: url('../fonts/Prompt-Light.ttf');
 }
+
 //Main colors
 $classicBlack: #000000;
 $classicWhite: #ffffff;
@@ -18,6 +19,7 @@ $blue7: #00356a;
 $blue8: #00162a;
 $blue9: #000913;
 $blue10: #000407;
+
 // Mixins
 @mixin displayFlexWrap {
     display: flex;
@@ -61,7 +63,6 @@ h1, h2, h3, h4, h5, p{
     color: $blue4;
 }
 h1{
-    // font-size: 36px;
     font-size: 2.25rem;
 }
 h2{
@@ -74,6 +75,8 @@ p{
     font-family: Prompt Regular;
     font-size: 1rem;
 }
+
+//Custom classes
 .center-block{
     width: 80%;
     margin: 0px auto;
@@ -81,9 +84,6 @@ p{
 }
 .blue-text{
     color: $blue6;
-}
-.animation-bg{
-    animation:color-change-2x 5s linear infinite alternate both;
 }
 .underline::after{
     display: block;
@@ -120,6 +120,9 @@ p{
 .blured-picture{
     filter: brightness(70%);
 }
+.margin-scroll{ 
+    scroll-margin-top: 160px; 
+}
 
 // Animista animations:
 @keyframes color-change-2x{0%{background:$blue1} 50%{background:$blue2} 100%{background:$blue3}}
@@ -127,7 +130,7 @@ p{
 @keyframes focus-in-contract{0%{letter-spacing:1em;filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
 @keyframes text-focus-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
 
-// Header
+// Start of header
 header{
     position: sticky;
     top: 0px;
@@ -139,7 +142,6 @@ header{
         background-color: inherit;
         justify-content: space-between;
         #logo{
-            // border: 3px solid $blue3;
             border: 5px solid rgba( 255, 255, 255, 0.18 );
             box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
             border-radius: 5px;
@@ -228,14 +230,11 @@ header{
         @include centerAlign();
         flex-direction: column;
         i{
-            font-size: 126px;
+            font-size: 6.5rem;
             color: $blue6;
         }
         .text-block{
             @extend .border-background;
-            // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-            // border-radius: 10px;
-            // border: 5px solid rgba( 255, 255, 255, 0.18 );
             padding: 1.25rem;
             @include displayFlexWrap();
             @include centerAlign();
@@ -247,11 +246,9 @@ header{
 
 // Start of main
 main{
-    min-height: 2000px;
-    // background-color: $blue1;
     .main-block{
-        padding: 2rem 0;
-        height: 600px;
+        padding-top: 3rem;
+        padding-bottom: 5rem;
         .center-block{
             justify-content: center;
             // About
@@ -259,12 +256,9 @@ main{
                 @include displayFlexWrap();
                 flex-direction: row;
                 justify-content: space-between;
-                padding-top: 70px;
+                padding-top: 3rem;
                 .image-block{
                     @include displayFlexWrap();
-                    // justify-content: center;
-                    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-                    // border: 5px solid rgba(255, 255, 255, 0.18);
                     border-radius: 5px;
                     width: 47.5%;
                     height: 310px;
@@ -306,22 +300,30 @@ main{
                     z-index: 0;
                     .row-one{
                         @include displayFlexWrap();
-                        // flex-direction: row;
                         justify-content: space-around;
                         .name, .age, .place{
                             text-align: center;
                         }
-                        p{ color: $classicWhite; }
+                        .place{
+                            a{
+                                font-family: Prompt Regular;
+                                color: $blue4;
+                                transition: 0.3s;
+                                &:hover{
+                                    color: $blue3;
+                                }
+                            }
+                        }
                     }
                     .row-two{
                         margin-top: 10px;
                         border-radius: 10px;
-                        background-color: $blue3;
-                        padding: 0.5rem;
+                        background-color: $blue4;
+                        padding: 0.7rem;
+                        p{color: $blue1;}
                     }
                     p{
-                        font-size: 1.15rem;
-                        color: $blue1;
+                        font-size: 1.1rem;
                     }
                 }
             }
@@ -329,7 +331,7 @@ main{
             #skills-block{
                 @include displayFlexWrap();
                 justify-content: space-between;
-                padding-top: 4rem;
+                padding-top: 3rem;
                 .skill-type{
                     @include displayFlexWrap();
                     @extend .border-background;
@@ -341,9 +343,6 @@ main{
                     text-align: center;
                     &:hover{
                         transform: scale(1.1);
-                    }
-                    p{
-                        font-size: 0.9rem;
                     }
                     a{ 
                         @extend .link-button;
@@ -365,15 +364,8 @@ main{
                 .project-type{
                     @extend .skill-type;
                     width: 22%;
+                    height: 100%;
                     padding: 2rem;
-                    // @include displayFlexWrap();
-                    // @extend .border-background;
-                    // justify-content: center;
-                    // padding: 2rem;
-                    // width: 22%;
-                    // transition: 0.3s;
-                    // // height: 350px;
-                    // text-align: justify;
                     &:hover{
                         transform: scale(1.1);
                     }
@@ -394,11 +386,11 @@ main{
                 @include displayFlexWrap();
                 justify-content: center;
                 #my-form{
-                    width: 50%;
+                    width: 60%;
                     label{
                         font-family: Prompt Regular;
                         color: $blue1;
-                        font-size: 1.25rem;
+                        font-size: 1.5rem;
                     }
                     input[type=text], input[type=email], #inputTextArea{
                         width: 100%;
@@ -408,13 +400,13 @@ main{
                         border-bottom: 2px solid $blue2;
                         transition: 0.3s;
                         color: $blue1;
-                        font-size: 1rem;
+                        font-size: 1.2rem;
                         resize: vertical;
                         &:focus{
                             border-radius: 5px;
                             outline: none;
                             background-color: $blue5;
-                            font-size: 1.25rem;
+                            font-size: 1.3rem;
                         }
                     }
                     input[type=submit], input[type=reset]{
@@ -442,6 +434,7 @@ main{
     }
 }
 
+// Start of footer
 footer{
     background-color: $blue4;
     padding: 2rem 0;
@@ -452,7 +445,15 @@ footer{
         .left{
             h3{
                 color: $blue1;
-                font-size: 20px;
+                font-size: 1.25rem;
+            }
+        }
+        .middle{
+            a{
+                padding: 2px 5px;
+                border: 2px solid $blue1;
+                border-radius: 5px;
+                background-color: $blue5;
             }
         }
         .right{
@@ -460,9 +461,11 @@ footer{
                 @include displayFlexWrap();
                 li{
                     margin-left: 20px;
-                    a{ @extend .link-button; }
                 }
             }
+        }
+        a{ 
+            @extend .link-button; 
         }
     }   
 }
